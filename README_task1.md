@@ -42,3 +42,34 @@ sql_queries/1_order_sales_analysis.sql
 - Revenue trends can highlight peak periods and growth over time.
 
 ---
+
+## 👥 Task 2: Customer Analysis
+
+This task analyzes customer behavior based on ordering history in the `customer_orders` dataset.
+
+### 🔍 Objective
+
+- Distinguish between one-time and repeat customers.
+- Segment customers based on their order frequency.
+- Track customer activity over time.
+
+---
+
+### ✅ SQL Queries
+
+- **Repeat vs. One-Time Customers**  
+  Identifies how many customers placed only one order vs. multiple orders.
+
+- **Customer Segmentation by Order Count**  
+  Groups customers based on how many orders they've placed (e.g., 1, 2, 3+ orders).
+
+- **Monthly Active Customers**  
+  Shows how many unique customers placed orders each month.
+
+---
+
+### 🧠 Expected Insights
+
+- A large proportion of one-time customers may indicate a retention issue.
+- Monthly active customers reveal seasonality or growth trends.
+
