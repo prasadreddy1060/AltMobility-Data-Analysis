@@ -93,3 +93,39 @@ FROM payments
 WHERE payment_status = 'failed'
 GROUP BY payment_method
 ORDER BY failed_payments DESC;
+
+--4.1 Comprehensive Order & Payment Overview
+SELECT 
+    co.order_id,
+    co.customer_id,
+    co.order_date,
+    co.order_status,
+    co.order_amount,
+    p.payment_id,
+    p.payment_method,
+    p.payment_date,
+    p.payment_status
+FROM customer_orders AS co
+LEFT JOIN payments AS p
+    ON co.order_id = p.order_id
+ORDER BY co.order_date;
+
+--4.2 Orders with Payment Failures
+SELECT 
+    co.order_id,
+    co.customer_id,
+    co.order_amount,
+    p.payment_status,
+    p.payment_method
+FROM customer_orders AS co
+JOIN payments AS p ON co.order_id = p.order_id
+WHERE p.payment_status = 'failed';
+
+--4.3 Revenue from Successful Payments
+SELECT 
+    SUM(co.order_amount) AS successful_payment_revenue
+FROM customer_orders AS co
+JOIN payments AS p ON co.order_id = p.order_id
+WHERE p.payment_status = 'successful';
+
+
