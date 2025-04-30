@@ -129,3 +129,23 @@ JOIN payments AS p ON co.order_id = p.order_id
 WHERE p.payment_status = 'successful';
 
 
+--SQL Query to Identify Customer Retention Cohorts
+WITH cohort AS (
+    SELECT 
+        customer_id,
+        MIN(DATE_TRUNC('month', order_date)) AS first_order_month
+    FROM customer_orders
+    GROUP BY customer_id
+)
+SELECT 
+    c.first_order_month,
+    DATE_TRUNC('month', o.order_date) AS order_month,
+    COUNT(DISTINCT o.customer_id) AS retained_customers
+FROM cohort c
+JOIN customer_orders o 
+    ON c.customer_id = o.customer_id
+WHERE DATE_TRUNC('month', o.order_date) > c.first_order_month
+GROUP BY c.first_order_month, order_month
+ORDER BY c.first_order_month, order_month;
+
+
