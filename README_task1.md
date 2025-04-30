@@ -131,8 +131,40 @@ This task merges `customer_orders` and `payments` data to create a comprehensive
 
  **Expected Insights**
 
+## 📈 Task 5: Customer Retention Analysis
+
+This task tracks customer retention by examining repeat purchases made by customers after their first order.
+
+### 🔍 Objective
+
+- Visualize the percentage of customers who made repeat purchases in each subsequent month after their first purchase.
+- Helps gauge the effectiveness of customer retention strategies.
+
+---
+
+### SQL Queries
+
+- **Customer Retention Cohort Analysis**  
+  This query calculates how many customers from each cohort returned to make repeat purchases in the following months.
+
+---
+
+###  Visualization
+
+- **Visualization Type**: A heatmap or line graph displaying customer retention per cohort month.
+- **Tools Used**: Business Intelligence tools (e.g., Power BI, Tableau) or Python (Matplotlib/Seaborn) to generate the visualization.
+
+---
+
+### Expected Insights
+
+- The retention rate is likely to decrease as time passes since the first purchase.
+- Identifying drop-offs can help refine marketing and customer retention strategies.
+
+
 - You can assess both operational efficiency and payment success in a unified report.
 - Helps identify transactions that need follow-up due to failed payments.
+
 
 
 
