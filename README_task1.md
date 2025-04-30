@@ -1,11 +1,11 @@
 
 # Alt Mobility Data Analysis Project
 
-## 📊 Task 1: Order and Sales Analysis
+##  Task 1: Order and Sales Analysis
 
 This task focuses on analyzing order fulfillment and revenue trends using the `customer_orders` dataset.
 
-### 🔍 Objective
+###  Objective
 
 - Understand the breakdown of order statuses (e.g., delivered, pending, shipped).
 - Analyze overall sales revenue and order volume.
@@ -14,7 +14,7 @@ This task focuses on analyzing order fulfillment and revenue trends using the `c
 
 ---
 
-### ✅ SQL Queries
+###  SQL Queries
 
 - **Total Orders & Revenue**:
   Calculates the overall number of orders and total revenue.
@@ -35,7 +35,7 @@ sql_queries/1_order_sales_analysis.sql
 
 ---
 
-### 🧠 Expected Insights
+###  Expected Insights
 
 - Delivered orders are likely the highest revenue generators.
 - Average order value may vary across statuses.
@@ -43,11 +43,11 @@ sql_queries/1_order_sales_analysis.sql
 
 ---
 
-## 👥 Task 2: Customer Analysis
+##  Task 2: Customer Analysis
 
 This task analyzes customer behavior based on ordering history in the `customer_orders` dataset.
 
-### 🔍 Objective
+### Objective
 
 - Distinguish between one-time and repeat customers.
 - Segment customers based on their order frequency.
@@ -55,7 +55,7 @@ This task analyzes customer behavior based on ordering history in the `customer_
 
 ---
 
-### ✅ SQL Queries
+###  SQL Queries
 
 - **Repeat vs. One-Time Customers**  
   Identifies how many customers placed only one order vs. multiple orders.
@@ -68,16 +68,16 @@ This task analyzes customer behavior based on ordering history in the `customer_
 
 ---
 
-### 🧠 Expected Insights
+###  Expected Insights
 
 - A large proportion of one-time customers may indicate a retention issue.
 - Monthly active customers reveal seasonality or growth trends.
 
-## 💳 Task 3: Payment Status Analysis
+##  Task 3: Payment Status Analysis
 
 This task explores the `payments.csv` data to understand the outcomes and trends in payment processing.
 
-### 🔍 Objective
+###  Objective
 
 - Calculate success and failure rates of payments.
 - Detect monthly trends in payment status.
@@ -85,7 +85,7 @@ This task explores the `payments.csv` data to understand the outcomes and trends
 
 ---
 
-### ✅ SQL Queries
+### SQL Queries
 
 - **Payment Success Rate**  
   Breakdown of how many payments succeeded, failed, or were pending.
@@ -98,7 +98,41 @@ This task explores the `payments.csv` data to understand the outcomes and trends
 
 ---
 
-### 🧠 Expected Insights
+###  Expected Insights
 
 - A high failure rate may indicate issues with specific methods or systems.
 - Monthly trends can expose periods of instability or improvement.
+
+
+##  Task 4: Order Details Report
+
+This task merges `customer_orders` and `payments` data to create a comprehensive view of order and payment activity.
+
+###  Objective
+
+- Link each order to its payment status and method.
+- Spot failed payments tied to specific orders.
+- Track revenue from successfully paid orders.
+
+---
+
+### SQL Queries
+
+- **Comprehensive Order & Payment Overview**  
+  A full report combining orders with corresponding payment records.
+
+- **Orders with Payment Failures**  
+  Helps in identifying at-risk transactions.
+
+- **Revenue from Successful Payments**  
+  Captures the actual earned revenue from fulfilled transactions.
+
+---
+
+ **Expected Insights**
+
+- You can assess both operational efficiency and payment success in a unified report.
+- Helps identify transactions that need follow-up due to failed payments.
+
+
+
