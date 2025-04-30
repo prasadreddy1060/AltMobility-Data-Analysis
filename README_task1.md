@@ -73,3 +73,32 @@ This task analyzes customer behavior based on ordering history in the `customer_
 - A large proportion of one-time customers may indicate a retention issue.
 - Monthly active customers reveal seasonality or growth trends.
 
+## 💳 Task 3: Payment Status Analysis
+
+This task explores the `payments.csv` data to understand the outcomes and trends in payment processing.
+
+### 🔍 Objective
+
+- Calculate success and failure rates of payments.
+- Detect monthly trends in payment status.
+- Examine payment failures by method.
+
+---
+
+### ✅ SQL Queries
+
+- **Payment Success Rate**  
+  Breakdown of how many payments succeeded, failed, or were pending.
+
+- **Monthly Payment Success vs. Failure**  
+  Trend analysis of payment outcomes month-by-month.
+
+- **Failed Payments by Payment Method**  
+  Highlights which payment methods are most prone to failure.
+
+---
+
+### 🧠 Expected Insights
+
+- A high failure rate may indicate issues with specific methods or systems.
+- Monthly trends can expose periods of instability or improvement.
